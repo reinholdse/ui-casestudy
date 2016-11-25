@@ -1,0 +1,28 @@
+header {
+  background: #303030;
+  padding: 0 60px;
+  height: 50px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+header.off-top {
+  box-shadow: 0 3px 30px #333;
+}
+
+#left-header {
+  width: 500px;
+  padding: 5px 0;
+}
+
+#left-header img {
+  width: 40px;
+  height: 40px;
+}
+
+#left-header nav {
+  width: 350px;
+}
