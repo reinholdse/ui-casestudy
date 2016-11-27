@@ -1,0 +1,29 @@
+#banner-signup {
+  position: relative;
+  height: 600px;
+  padding: 30px 30px;
+  background: url("../images/banner-signup-background.png") no-repeat center top;
+  text-align: center;
+  color: white;
+}
+
+#banner-signup .big-logo {
+  margin-top: 130px;
+}
+
+#banner-signup p {
+  font-size: 20px;
+  margin-top: 50px;
+}
+
+#banner-signup .cta-container {
+  width: 350px;
+  margin: 0 auto;
+}
+
+#banner-signup .cta-container .btn-default {
+  height: 40px;
+  width: 160px;
+  line-height: 40px;
+  font-size: 20px;
+}

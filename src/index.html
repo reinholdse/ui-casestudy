@@ -5,28 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>PERM!</title>
     <link href="style/normalize.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700" rel="stylesheet">
     <link href="style/base.css" rel="stylesheet">
     <link href="style/header.css" rel="stylesheet">
+    <link href="style/banner-signup.css" rel="stylesheet">
     <!-- Additional stylesheets -->
   </head>
   <body>
-    <header>
+    <header class="flex-container">
       <div id="left-header" class="flex-container">
-        <a href="index.html"><img src="images/logo_small.svg" alt="Logo" /></a>
+        <a href="index.html"><img class="small-logo" src="images/logo_small.svg" alt="Logo" /></a>
         <nav class="flex-container">
           <a href="#">Categories</a>
           <a href="#">Professionals</a>
           <a href="#">Teams</a>
         </nav>
       </div>
-      <div id="right-header" class="flex-container"></div>
+      <div id="right-header" class="flex-container">
+        <a href="#" class="btn-default btn-login">Log In</a>
+        <a href="#" class="btn-default btn-highlight btn-signup">Sign Up</a>
+      </div>
     </header>
+
+    <section id="banner-signup">
+      <a class="btn-exit" href="#"><img src="images/white_exit_cross.svg" alt=""></a>
+      <img class="big-logo" src="images/logo_big.svg" alt="Logo">
+      <p>Join the Community!</p>
+      <div class="cta-container flex-container">
+        <a href="#" class="btn-default btn-login">Log In</a>
+        <a href="#" class="btn-default btn-highlight btn-signup">Sign Up</a>
+      </div>
+    </section>
 
     <!-- Additional sections -->
 
     <script src="script/jquery-3.1.0.min.js"></script>
     <script src="script/header.js"></script>
+    <script src="script/user.js"></script>
     <!-- Additional scripts -->
   </body>
 </html>

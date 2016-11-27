@@ -22,4 +22,53 @@ section {
   background: white;
 }
 
-button {}
+section:first-of-type {
+  margin-top: 50px;
+}
+
+.btn-default {
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  width: 140px;
+  color: white;
+  text-transform: uppercase;
+  border: 2px solid white;
+  border-radius: 6px;
+  transition: font-weight 0.1s ease-in-out;
+}
+
+.btn-default:hover {
+  font-weight: 700;
+}
+
+.btn-highlight {
+  border-color: #3295b8;
+  background-color: #3295b8;
+}
+
+.btn-exit {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  opacity: 0.7;
+  transition: opacity 0.1s;
+}
+
+.btn-exit:hover {
+  opacity: 1;
+}
+
+.btn-exit > img {
+  width: 40px;
+  height: 40px;
+}
+
+.small-logo {
+  width: 40px;
+  height: 40px;
+}
+
+.big-logo {
+  width: 240px;
+}

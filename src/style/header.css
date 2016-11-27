@@ -18,11 +18,20 @@ header.off-top {
   padding: 5px 0;
 }
 
-#left-header img {
-  width: 40px;
-  height: 40px;
-}
-
 #left-header nav {
   width: 350px;
+}
+
+#left-header nav a {
+  opacity: 0.8;
+  transition: opacity 0.1s;
+}
+
+#left-header nav a:hover {
+  opacity: 1;
+}
+
+#right-header {
+  width: 310px;
+  padding: 5px 0;
 }
