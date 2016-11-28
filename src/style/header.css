@@ -7,15 +7,20 @@ header {
   width: 100%;
   color: white;
   transition: all 0.3s ease;
+  z-index: 10;
 }
 
 header.off-top {
-  box-shadow: 0 3px 30px #333;
+  box-shadow: 0 3px 30px #000;
 }
 
 #left-header {
   width: 500px;
   padding: 5px 0;
+}
+
+#left-header > a {
+  height: 40px;
 }
 
 #left-header nav {

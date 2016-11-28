@@ -1,8 +1,9 @@
 #banner-signup {
   position: relative;
-  height: 600px;
+  height: 580px;
   padding: 30px 30px;
-  background: url("../images/banner-signup-background.png") no-repeat center top;
+  background-repeat: no-repeat;
+  background-position: center top;
   text-align: center;
   color: white;
 }
