@@ -6,6 +6,15 @@
   align-items: center;
 }
 
+.flex-container > a {
+  color: rgba(255, 255, 255, 0.8);
+  transition: color 0.1s;
+}
+
+.flex-container > a:hover {
+  color: rgba(255, 255, 255, 1);
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
@@ -71,4 +80,83 @@ section:first-of-type {
 
 .big-logo {
   width: 240px;
+}
+
+.overlay {
+  z-index: 20;
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,.6);
+}
+
+.overlay .btn-exit-overlay {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  opacity: 0.8;
+}
+
+.overlay .btn-exit-overlay:hover {
+  opacity: 1;
+}
+
+.overlay .btn-exit-overlay > img {
+  width: 50px;
+  height: 50px;
+}
+
+input {
+  height: 30px;
+  width: 280px;
+  background-color: white;
+  border: 1px solid #d3d3d3;
+  text-indent: 14px;
+  position: relative;
+}
+
+.input-bundle {
+  margin-top: 10px;
+  width: 280px;
+}
+
+.input-bundle input:focus {
+  z-index: 30;
+}
+
+.input-bundle input:nth-child(n+2) {
+  border-top: none;
+}
+
+span.checkbox {
+  height: 18px;
+  width: 18px;
+  border: 1px solid #424242;
+  display: inline-block;
+  position: relative;
+  border-radius: 4px;
+}
+
+span.checkbox:hover {
+  cursor: pointer;
+}
+
+span.checkbox:after {
+  content: '';
+  height: 12px;
+  width: 12px;
+  background-color: rgba(35, 34, 73, 0.1);
+  border-radius: 2px;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+}
+
+span.checkbox.active:after {
+  background-color: #424242;
 }

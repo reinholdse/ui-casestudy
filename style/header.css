@@ -27,16 +27,39 @@ header.off-top {
   width: 350px;
 }
 
-#left-header nav a {
-  opacity: 0.8;
-  transition: opacity 0.1s;
+.right-header {
+  display: none;
 }
 
-#left-header nav a:hover {
-  opacity: 1;
+.right-header.active {
+  display: flex;
 }
 
-#right-header {
+#login-bar {
   width: 310px;
   padding: 5px 0;
+}
+
+#user-bar {
+  padding: 5px 0;
+}
+
+#user-bar .username {
+  font-size: 18px;
+  font-style: italic;
+  margin-right: 30px;
+}
+
+#user-bar .btn-logout {
+  font-size: 12px;
+  border-width: 1px;
+  width: 70px;
+  height: 22px;
+  line-height: 22px;
+}
+
+#user-bar img {
+  width: 34px;
+  height: 34px;
+  margin-right: 15px;
 }
