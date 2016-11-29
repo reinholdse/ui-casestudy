@@ -43,7 +43,7 @@
   }
 
   $view.clearModalForm = function($modal) {
-    $modal.find('input').val('');
+    $modal.find('input').empty();
     $modal.find('.checkbox').removeClass('active');
   }
 
@@ -78,7 +78,7 @@
     $view.closeOverlay();
     $user.logIn(name);
     $view.$banner_signup.slideUp();
-    $view.bindEventListeners();
+    // $view.bindEventListeners();
   }
 
   $view.signupUser = function() {
@@ -86,7 +86,7 @@
     $view.closeOverlay();
     $user.logIn(name);
     $view.$banner_signup.slideUp();
-    $view.bindEventListeners();
+    // $view.bindEventListeners();
   }
 
 
@@ -95,7 +95,7 @@
 
     // Header, Signup Banner
     $(global).on('resize', $view.adjustSignupBanner);
-    $(global).on('scroll', $view.adjustHeader)
+    $(global).on('scroll', $view.adjustHeader);
     $('.btn-exit').on('click', function() {
       $(this).parent().slideUp();
     });

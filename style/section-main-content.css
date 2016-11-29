@@ -1,0 +1,104 @@
+#main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#main-content article {
+  margin-top: 30px;
+  padding: 15px;
+  background-color: white;
+  color: #404040;
+  display: flex;
+  justify-content: space-between;
+}
+
+#main-content article:last-child {
+  margin-bottom: 30px;
+}
+
+#main-content article img {
+  display: block;
+}
+
+#main-content article .info {
+  width: 410px;
+  margin-left: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#main-content article .info .user {
+  display: flex;
+  align-items: center;
+}
+
+#main-content article .info .user .profile-picture {
+  width: 60px;
+  height: 60px;
+}
+
+#main-content article .info .user .username {
+  font-style: italic;
+  margin-left: 15px;
+}
+
+#main-content article .info .tags {
+  color: #3295b8;
+  font-size: 16px;
+}
+
+#main-content article .info .comment-section .comment-default {
+  border-left: 3px solid #3295b8;
+  padding: 3px 0;
+  margin: 10px 0;
+  font-size: 14px;
+}
+
+#main-content article .info .comment-section .comment-input {
+  border-left: 3px solid #404040;
+}
+
+#main-content article .info .comment-section .comment-default > div {
+  margin-left: 5px;
+}
+
+#main-content article .info .comment-section .comment-input .input-wrapper {
+  position: relative;
+  margin-left: 5px;
+}
+
+#main-content article .info .comment-section .comment-input .input-wrapper > input {
+  height: 20px;
+}
+
+#main-content article .info .comment-section .comment-input .input-wrapper > a > img {
+  height: 10px;
+}
+
+#main-content article .info .comment-section .comment-input .input-wrapper > a {
+  position: absolute;
+  top: 4px;
+  right: 10px;
+}
+
+#main-content article .info .statistics-bar,
+#main-content article .info .statistics-bar .stat {
+  display: flex;
+  align-items: center;
+}
+
+#main-content article .info .stat:not(:first-child) {
+  margin-left: 45px;
+}
+
+#main-content article .info .statistics-bar img {
+  height: 15px;
+}
+
+#main-content article .info .statistics-bar .number {
+  font-size: 12px;
+  color: #999;
+  margin-left: 10px;
+}
