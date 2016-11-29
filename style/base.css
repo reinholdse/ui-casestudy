@@ -6,12 +6,12 @@
   align-items: center;
 }
 
-.flex-container > a {
+.link {
   color: rgba(255, 255, 255, 0.8);
   transition: color 0.1s;
 }
 
-.flex-container > a:hover {
+.link:hover {
   color: rgba(255, 255, 255, 1);
 }
 

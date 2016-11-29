@@ -45,7 +45,7 @@ header.off-top {
 }
 
 #user-bar .username {
-  font-size: 18px;
+  font-size: 16px;
   font-style: italic;
   margin-right: 30px;
 }
@@ -58,8 +58,17 @@ header.off-top {
   line-height: 22px;
 }
 
-#user-bar img {
+#user-bar .profile-picture {
   width: 34px;
   height: 34px;
   margin-right: 15px;
+}
+
+#user-bar img {
+  width: 34px;
+  height: 34px;
+}
+
+#user-bar .profile-picture:hover + .username {
+  color: rgba(255, 255, 255, 1);
 }
