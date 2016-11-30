@@ -1,0 +1,64 @@
+#floating-action-search {
+  position: fixed;
+  bottom: 60px;
+  left: 60px;
+  min-height: 40px;
+  min-width: 30px;
+}
+
+#floating-action-search .btn-search {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: block;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  position: absolute;
+  right: -30px;
+  top: -10px;
+  z-index: 50;
+}
+
+#floating-action-search .btn-search:hover {
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2), 0 6px 20px rgba(0,0,0,0.19);
+}
+
+
+#floating-action-search .btn-search.btn-dark {
+  background-color: #404040;
+  border-color: #404040;
+}
+
+#floating-action-search .btn-search.btn-dark:hover {
+  background-color: #353535;
+  box-shadow: none;
+}
+
+#floating-action-search .btn-search > img {
+  width: 40px;
+  height: 40px;
+  display: block;
+  position: absolute;
+  top: 9px;
+  left: 10px;
+}
+
+#floating-action-search .input-search {
+  opacity: 0;
+  width: 0;
+  border-width: 0;
+  height: 40px;
+  font-size: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  transition: width 0.4s ease-in-out, opacity 0.4s ease-in-out;
+  outline: none;
+}
+
+#floating-action-search.active {
+  z-index: 100;
+}
+
+#floating-action-search.active .input-search {
+  width: 300px;
+  border-width: 1px;
+  opacity: 1;
+}

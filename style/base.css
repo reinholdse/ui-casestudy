@@ -26,6 +26,18 @@ a {
   text-decoration: none;
 }
 
+button {
+  border: none;
+}
+
+button:focus {
+  outline: 0;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
 section {
   width: 100%;
 }

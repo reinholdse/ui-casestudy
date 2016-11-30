@@ -11,12 +11,17 @@
     <link href="style/banner-signup.css" rel="stylesheet">
     <link href="style/modal.css" rel="stylesheet">
     <link href="style/section-main-content.css" rel="stylesheet">
+    <link href="style/search.css"  rel="stylesheet">
     <!-- Additional stylesheets -->
   </head>
   <body>
 
-    <div class="overlay">
-      <a class="btn-exit-overlay" href="#"><img src="images/white_exit_cross.svg" alt=""></a>
+    <div class="overlay search-overlay">
+      <a class="btn-exit-overlay btn-exit-search-overlay" href="#"><img src="images/white_exit_cross.svg" alt=""></a>
+    </div>
+
+    <div class="overlay user-overlay">
+      <a class="btn-exit-overlay btn-exit-user-overlay" href="#"><img src="images/white_exit_cross.svg" alt=""></a>
       <div id="modal-head-bar" class="flex-container">
         <a id="tab-login" class="link" href="#">LOG IN</a>
         <a id="tab-signup" class="link" href="#">SIGN UP</a>
@@ -47,6 +52,13 @@
         </div>
         <a href="#" class="btn-default btn-highlight btn-user-signup">Sign Up</a>
       </div>
+    </div>
+
+    <div id="floating-action-search">
+      <button class="btn-search btn-highlight"><img src="images/search_icon.svg" alt=""></button>
+      <input class="input-search" type="text" placeholder="search">
+    </div>
+
     </div>
 
     <header class="flex-container">
@@ -82,7 +94,7 @@
     <section id="main-content">
       <article>
         <img src="images/graphic1.png" alt="">
-        <aside class="info">
+        <div class="info">
 
           <div class="meta">
             <span class="user">
@@ -114,11 +126,11 @@
             <span class="stat facourites"><img src="images/favourite_icon.svg" alt=""><span class="number">4315</span></span>
           </div>
 
-        </aside>
+        </div>
       </article>
       <article>
         <img src="images/graphic2.png" alt="">
-        <aside class="info">
+        <div class="info">
 
           <div class="meta">
             <span class="user">
@@ -150,11 +162,11 @@
             <span class="stat facourites"><img src="images/favourite_icon.svg" alt=""><span class="number">4315</span></span>
           </div>
 
-        </aside>
+        </div>
       </article>
       <article>
         <img src="images/graphic3.png" alt="">
-        <aside class="info">
+        <div class="info">
 
           <div class="meta">
             <span class="user">
@@ -186,7 +198,7 @@
             <span class="stat facourites"><img src="images/favourite_icon.svg" alt=""><span class="number">4315</span></span>
           </div>
 
-        </aside>
+        </div>
       </article>
     </section>
 

@@ -28,7 +28,9 @@
 
 
   /* OVERLAY */
-  $view.$overlay = $('.overlay');
+  $view.$overlay_user = $('.user-overlay');
+  $view.$overlay_search = $('.search-overlay');
+  $view.$search_btn = $('.btn-search');
   $view.login = {};
   $view.login.$tab = $('#tab-login');
   $view.login.$modal = $('#modal-login');
@@ -43,7 +45,7 @@
   }
 
   $view.clearModalForm = function($modal) {
-    $modal.find('input').empty();
+    $modal.find('input').val('');
     $modal.find('.checkbox').removeClass('active');
   }
 
@@ -53,14 +55,14 @@
   }
 
 
-  $view.openOverlay = function(mode) {
+  $view.openUserOverlay = function(mode) {
     mode.$tab.addClass('active');
     mode.$modal.addClass('active');
-    $view.$overlay.fadeIn(150);
+    $view.$overlay_user.fadeIn(150);
   }
 
-  $view.closeOverlay = function() {
-    $view.$overlay.fadeOut(150);
+  $view.closeUserOverlay = function() {
+    $view.$overlay_user.fadeOut(150);
     $view.login.deactivate();
     $view.signup.deactivate();
   }
@@ -75,7 +77,7 @@
 
   $view.loginUser = function() {
     var name = $view.login.$modal.find('[name=username]').val();
-    $view.closeOverlay();
+    $view.closeUserOverlay();
     $user.logIn(name);
     $view.$banner_signup.slideUp();
     // $view.bindEventListeners();
@@ -83,10 +85,24 @@
 
   $view.signupUser = function() {
     var name = $view.signup.$modal.find('[name=username]').val();
-    $view.closeOverlay();
+    $view.closeUserOverlay();
     $user.logIn(name);
     $view.$banner_signup.slideUp();
     // $view.bindEventListeners();
+  }
+
+  $view.openSearchOverlay = function() {
+    $view.$search_btn.parent().addClass('active');
+    $view.$overlay_search.fadeIn(150);
+    $view.$search_btn.addClass('btn-dark');
+    $view.$search_btn.next().focus();
+  }
+
+  $view.closeSearchOverlay = function() {
+    $view.$search_btn.next().val('');
+    $view.$search_btn.removeClass('btn-dark');
+    $view.$overlay_search.fadeOut(150);
+    $view.$search_btn.parent().removeClass('active');
   }
 
 
@@ -101,19 +117,28 @@
     });
 
     // Overlay
-    $('.overlay .btn-exit-overlay').on('click', $view.closeOverlay);
+    $('.overlay .btn-exit-user-overlay').on('click', $view.closeUserOverlay);
+    $('.overlay .btn-exit-search-overlay').on('click', $view.closeSearchOverlay);
     $('body').on('keydown', function(e) {
-      if ($view.$overlay.is(':visible'))
+      if ($view.$overlay_user.is(':visible')) {
         if ($view.login.$modal.is(':visible'))
-          $view.reactToKeypress($view.loginUser, $view.closeOverlay, e);
+          $view.reactToKeypress($view.loginUser, $view.closeUserOverlay, e);
         else if ($view.signup.$modal.is(':visible'))
-          $view.reactToKeypress($view.signupUser, $view.closeOverlay, e);
+          $view.reactToKeypress($view.signupUser, $view.closeUserOverlay, e);
+      } else if ($view.$overlay_search.is(':visible')) {
+        $view.reactToKeypress($view.closeSearchOverlay, $view.closeSearchOverlay, e);
+      }
+    });
+    $('body').on('click', function(e) {
+      if ($view.$overlay_search.is(':visible'))
+        if (!$(e.target).closest("#floating-action-search").length)
+          $view.closeSearchOverlay();
     });
     $('.btn-login').on('click', function() {
-      $view.openOverlay($view.login);
+      $view.openUserOverlay($view.login);
     });
     $('.btn-signup').on('click', function() {
-      $view.openOverlay($view.signup);
+      $view.openUserOverlay($view.signup);
     });
     $('.btn-logout').on('click', function() {
       $user.logOut();
@@ -131,6 +156,12 @@
     });
     $('.checkbox').on('click', function() {
       $(this).toggleClass('active');
+    });
+    $view.$search_btn.on('click', function() {
+      if ($view.$search_btn.hasClass('btn-dark'))
+        $view.closeSearchOverlay();
+      else
+        $view.openSearchOverlay();
     });
 
   };
