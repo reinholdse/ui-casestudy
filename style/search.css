@@ -4,6 +4,7 @@
   left: 60px;
   min-height: 40px;
   min-width: 30px;
+  z-index: 50;
 }
 
 #floating-action-search .btn-search {
@@ -15,7 +16,7 @@
   position: absolute;
   right: -30px;
   top: -10px;
-  z-index: 50;
+  z-index: 55;
 }
 
 #floating-action-search .btn-search:hover {

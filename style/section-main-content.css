@@ -19,6 +19,8 @@
 
 #main-content article img {
   display: block;
+  width: 950px;
+  height: 470px;
 }
 
 #main-content article .info {
