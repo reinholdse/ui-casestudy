@@ -19,6 +19,9 @@
 
 #main-content article img {
   display: block;
+}
+
+#main-content article img.graphic {
   width: 950px;
   height: 470px;
 }
