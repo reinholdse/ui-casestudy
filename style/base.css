@@ -22,7 +22,8 @@ body {
   margin-top: 50px;
 }
 
-a {
+a,
+a:visited {
   text-decoration: none;
 }
 

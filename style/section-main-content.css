@@ -47,6 +47,7 @@
 #main-content article .info .user .username {
   font-style: italic;
   margin-left: 15px;
+  color: #404040;
 }
 
 #main-content article .info .tags {
