@@ -40,12 +40,15 @@
           <input type="text" name="username" placeholder="username" maxlength="20">
         </div>
         <div class="input-bundle">
-          <input type="password" name="password" placeholder="password" maxlength="28">
-          <input type="password" placeholder="confirm password" maxlength="28">
+          <input type="password" name="password" placeholder="password" maxlength="28" id="signupPassword">
+          <input type="password" name="confirmPassword" placeholder="confirm password" maxlength="28" id="confirmPassword">
+          <img src="images/iconOK.png" alt="" width="20px" id="iconConfirmPassword">
+
         </div>
         <div class="input-bundle">
-          <input type="email" placeholder="email">
-          <input type="email" placeholder="confirm email">
+          <input type="email" name="email" placeholder="email" >
+          <input type="email" name="confirmEmail" placeholder="confirm email" id="confirmEmail">
+          <img src="images/iconOK.png" alt="" width="20px" id="iconConfirmEmail">
         </div>
         <div class="flex-container">
           <span class="checkbox"></span><span>I feel happy today!</span>
@@ -209,6 +212,7 @@
     <script src="script/banner.controller.js"></script>
     <script src="script/login.controller.js"></script>
     <script src="script/search.controller.js"></script>
+    <script src="script/jquery.cookie.js"></script>
     <!-- Additional modules -->
   </body>
 </html>

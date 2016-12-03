@@ -3,6 +3,8 @@
 
 var HeaderController = App.require('header.controller');
 var BannerController = App.require('banner.controller');
+var confirmPasswordIsOk = false;
+var confirmEmailIsOk = false;
 
 var LoginController = {
 
@@ -18,7 +20,9 @@ var LoginController = {
     signup: {
       tab: $('#tab-signup'),
       modal: $('#modal-signup'),
-      userSignupButton: $('.btn-user-signup')
+      userSignupButton: $('.btn-user-signup'),
+      confirmPassword: $('#confirmPassword'),
+      confirmEmail: $('#confirmEmail')
     },
     loginButton: $('.btn-login'),
     signupButton: $('.btn-signup'),
@@ -69,6 +73,13 @@ var LoginController = {
     LoginController.settings.checkBox.on('click', function() {
       LoginController.settings.checkBox.toggleClass('active');
     });
+    LoginController.settings.signup.confirmPassword.on('keyup', function() {
+      LoginController.checkComfirmPassword();
+    });
+    LoginController.settings.signup.confirmEmail.on('keyup', function() {
+      LoginController.checkConfirmEmail();
+    });
+
     LoginController.settings.body.on('keydown', function(e) {
       if (LoginController.settings.overlay.is(':visible'))
         if (LoginController.settings.login.modal.is(':visible'))
@@ -116,16 +127,67 @@ var LoginController = {
 
   logInUser: function() {
     var name = LoginController.settings.login.modal.find('[name=username]').val();
-    LoginController.close();
-    HeaderController.logIn(name);
-    BannerController.settings.signupBanner.slideUp();
+    var password = LoginController.settings.login.modal.find('[name=password]').val();
+
+    if ($.cookie(name) != null) {
+      var cookiePassword = $.cookie(name);
+      if(cookiePassword == password) {
+        LoginController.close();
+        HeaderController.logIn(name);
+        BannerController.settings.signupBanner.slideUp();
+      } else {
+        alert("Wrong password");
+      }
+    } else {
+      alert("User unknown");
+    }
   },
 
   signUpUser: function() {
-    var name = LoginController.settings.login.modal.find('[name=username]').val();
-    LoginController.close();
-    HeaderController.logIn(name);
-    BannerController.settings.signupBanner.slideUp();
+    var name = LoginController.settings.signup.modal.find('[name=username]').val();
+    var password = LoginController.settings.signup.modal.find('[name=password]').val();
+    var email = LoginController.settings.signup.modal.find('[name=email]').val();
+
+    if(name.length > 0 && password.length > 0 && email.length > 0 && confirmPasswordIsOk && confirmEmailIsOk) {
+      $.cookie(name, password);
+      LoginController.close();
+      HeaderController.logIn(name);
+      BannerController.settings.signupBanner.slideUp();
+    } else {
+      alert("You haven't answer everything");
+    }
+  },
+
+
+  checkComfirmPassword: function() {
+    var password = LoginController.settings.signup.modal.find('[name=password]').val();
+		var confirmPassword = LoginController.settings.signup.modal.find('[name=confirmPassword]').val();
+
+		if(confirmPassword != password && confirmPassword.length > 0) {
+      $('#iconConfirmPassword').attr('src', 'images/iconNOK.png');
+      confirmPasswordIsOk = false;
+		} else if(confirmPassword == password){
+      $('#iconConfirmPassword').attr('src', 'images/iconOK.png');
+      confirmPasswordIsOk = true;
+		} else if(confirmPassword.length == 0) {
+      $('#iconConfirmPassword').attr('src', '');
+      confirmPasswordIsOk = false;
+    }
+  },
+
+  checkConfirmEmail: function() {
+    var email = LoginController.settings.signup.modal.find('[name=email]').val();
+    var confirmEmail = LoginController.settings.signup.modal.find('[name=confirmEmail]').val();
+    if(confirmEmail != email && confirmEmail.length > 0) {
+      $('#iconConfirmEmail').attr('src', 'images/iconNOK.png');
+      confirmEmailIsOk = false;
+    } else if(confirmEmail == email){
+      $('#iconConfirmEmail').attr('src', 'images/iconOK.png');
+      confirmEmailIsOk = true;
+    } else if(confirmEmail.length == 0) {
+      $('#iconConfirmEmail').attr('src', '');
+      confirmEmailIsOk = false;
+    }
   }
 
 };
