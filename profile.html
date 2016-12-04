@@ -8,16 +8,16 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700" rel="stylesheet">
     <link href="style/base.css" rel="stylesheet">
     <link href="style/header.css" rel="stylesheet">
-    <!-- <link href="style/banner.css" rel="stylesheet"> -->
+    <link href="style/banner.css" rel="stylesheet">
     <link href="style/login.css" rel="stylesheet">
-    <!-- <link href="style/main-content.css" rel="stylesheet"> -->
-    <!-- <link href="style/search.css"  rel="stylesheet"> -->
+    <link href="style/main-content.css" rel="stylesheet">
+    <link href="style/search.css"  rel="stylesheet">
     <link href="style/profile.css" rel="stylesheet">
   </head>
   <body>
 
-    <div class="overlay user-overlay">
-      <a class="btn-exit-overlay btn-exit-user-overlay" href="#"><img src="images/white_exit_cross.svg" alt=""></a>
+    <div class="overlay">
+      <a class="btn-exit-overlay" href="#"><img src="images/white_exit_cross.svg" alt=""></a>
       <div id="modal-head-bar" class="flex-container">
         <a id="tab-login" class="link" href="#">LOG IN</a>
         <a id="tab-signup" class="link" href="#">SIGN UP</a>
@@ -78,23 +78,23 @@
            Art enthusiast, currently working for PERM.</p>
         <p class="user-type">PRO</p>
         <div class="user-data">
-          <p class="number">678</p>
+          <p class="number">678</span>
           <p class="number-description">followers</p>
         </div>
         <div class="user-data">
-          <p class="number">83</p>
+          <p class="number">83</span>
           <p class="number-description">following</p>
         </div>
         <div class="interactions">
-          <img src="images/star.svg" alt="Follow icon">
+          <a href="#"><img src="images/star-alt.svg" alt="Follow icon"></a>
           <p class="interaction-description">Follow</p>
         </div>
         <div class="interactions">
-          <img src="images/close-envelope.svg" alt="Message icon">
+          <a href="#"><img src="images/close-envelope-alt.svg" alt="Message icon"></a>
           <p class="interaction-description">Message</p>
         </div>
         <div class="interactions">
-          <img src="images/dollar-symbol.svg" alt="Ask for price icon">
+          <a href="#"><img src="images/dollar-symbol-alt.svg" alt="Ask for price icon"></a>
           <p class="interaction-description">Ask for price</p>
         </div>
       </div>
@@ -102,11 +102,11 @@
       <div class="gallery">
 
         <div class="filters">
-          <button>Date</button>
-          <button>Likes</button>
-          <button>Views</button>
-          <button>Shares</button>
-          <button>Price</button>
+          <a href="#" class="link">Date</a>
+          <a href="#" class="link">Likes</a>
+          <a href="#" class="link">Views</a>
+          <a href="#" class="link">Shares</a>
+          <a href="#" class="link">Price</a>
         </div>
 
         <div class="images">
@@ -182,17 +182,15 @@
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
-    </section>
-
-    <script src="script/jquery-3.1.0.min.js"></script>
-    <script src="script/app.js"></script>
-    <script src="script/utils.js"></script>
-    <script src="script/header.controller.js"></script>
-    <script src="script/banner.controller.js"></script>
-    <script src="script/login.controller.js"></script>
-    <script src="script/search.controller.js"></script>
+      <script src="script/jquery-3.1.0.min.js"></script>
+      <script src="script/app.js"></script>
+      <script src="script/utils.js"></script>
+      <script src="script/header.controller.js"></script>
+      <script src="script/banner.controller.js"></script>
+      <script src="script/login.controller.js"></script>
+      <script src="script/search.controller.js"></script>
     <!-- Additional scripts -->
   </body>
 </html>
