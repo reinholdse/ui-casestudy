@@ -57,12 +57,21 @@
   width: 130px;
   display: flex;
   flex-direction: row;
+  align-items: center;
   color: #999;
+}
+
+.interactions a{
+  width: 25px;
+  height: 25px;
 }
 
 .interactions img{
   width: 25px;
-  margin-right: 10px;
+}
+
+.interactions p{
+  margin-left: 10px;
 }
 
 .gallery{
@@ -77,15 +86,18 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  background-color: white;
+  background-color: white;*
   border: 0px solid white;
   border-radius: 5px;
 }
 
-.filters button{
-  border: none;
-  background-color: inherit;
-  cursor: pointer;
+.filters .link{
+  transition: color 0.1s;
+  color: #404040;
+}
+
+.filters .link:hover{
+  font-weight: bold;
 }
 
 .images{
@@ -96,6 +108,9 @@
 }
 
 .picture{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   margin-bottom: 20px;
   padding: 15px 15px 0px 15px;
   background-color: white;

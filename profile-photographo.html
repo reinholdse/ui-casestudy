@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PERM!</title>
+    <link href="style/normalize.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700" rel="stylesheet">
+    <link href="style/base.css" rel="stylesheet">
+    <link href="style/header.css" rel="stylesheet">
+    <link href="style/banner.css" rel="stylesheet">
+    <link href="style/login.css" rel="stylesheet">
+    <link href="style/main-content.css" rel="stylesheet">
+    <link href="style/search.css"  rel="stylesheet">
+    <link href="style/profile.css" rel="stylesheet">
+  </head>
+  <body>
+
+    <div class="overlay">
+      <a class="btn-exit-overlay" href="#"><img src="images/white_exit_cross.svg" alt=""></a>
+      <div id="modal-head-bar" class="flex-container">
+        <a id="tab-login" class="link" href="#">LOG IN</a>
+        <a id="tab-signup" class="link" href="#">SIGN UP</a>
+      </div>
+
+      <div id="modal-login" class="modal">
+        <div class="input-bundle">
+          <input type="text" name="username" placeholder="username" maxlength="20">
+          <input type="password" name="password" placeholder="password" maxlength="28">
+        </div>
+        <a href="#" class="btn-default btn-highlight btn-user-login">Log In</a>
+      </div>
+
+      <div id="modal-signup" class="modal">
+        <div class="input-bundle">
+          <input type="text" name="username" placeholder="username" maxlength="20">
+        </div>
+        <div class="input-bundle">
+          <input type="password" name="password" placeholder="password" maxlength="28">
+          <input type="password" placeholder="confirm password" maxlength="28">
+        </div>
+        <div class="input-bundle">
+          <input type="email" placeholder="email">
+          <input type="email" placeholder="confirm email">
+        </div>
+        <div class="flex-container">
+          <span class="checkbox"></span><span>I feel happy today!</span>
+        </div>
+        <a href="#" class="btn-default btn-highlight btn-user-signup">Sign Up</a>
+      </div>
+    </div>
+
+    <header class="flex-container">
+      <div id="left-header" class="flex-container">
+        <a href="index.html"><img class="small-logo" src="images/logo_small.svg" alt="Logo" /></a>
+        <nav class="flex-container">
+          <a href="#" class="link">Categories</a>
+          <a href="#" class="link">Professionals</a>
+          <a href="#" class="link">Teams</a>
+        </nav>
+      </div>
+      <div id="login-bar" class="right-header flex-container active">
+        <a href="#" class="btn-default btn-login">Log In</a>
+        <a href="#" class="btn-default btn-highlight btn-signup">Sign Up</a>
+      </div>
+      <div id="user-bar" class="right-header flex-container">
+        <a href="#" class="profile-picture"><img src="images/prof2.png" alt=""></a>
+        <a href="#" class="username link"></a>
+        <a href="#" class="btn-default btn-logout">Log Out</a>
+      </div>
+    </header>
+
+    <section id="profile-main">
+      <div class ="user">
+        <img src="images/prof4.png" alt="Profile picture">
+        <p class="user-name">photographo</p>
+        <p class="user-description">Professional graphic team.
+           Art enthusiasts, currently working for PERM.</p>
+        <p class="user-type">PRO</p>
+        <div class="user-data">
+          <p class="number">678</span>
+          <p class="number-description">followers</p>
+        </div>
+        <div class="user-data">
+          <p class="number">83</span>
+          <p class="number-description">following</p>
+        </div>
+        <div class="interactions">
+          <a href="#"><img src="images/star-alt.svg" alt="Follow icon"></a>
+          <p class="interaction-description">Follow</p>
+        </div>
+        <div class="interactions">
+          <a href="#"><img src="images/close-envelope-alt.svg" alt="Message icon"></a>
+          <p class="interaction-description">Message</p>
+        </div>
+        <div class="interactions">
+          <a href="#"><img src="images/dollar-symbol-alt.svg" alt="Ask for price icon"></a>
+          <p class="interaction-description">Ask for price</p>
+        </div>
+      </div>
+
+      <div class="gallery">
+
+        <div class="filters">
+          <a href="#" class="link">Date</a>
+          <a href="#" class="link">Likes</a>
+          <a href="#" class="link">Views</a>
+          <a href="#" class="link">Shares</a>
+          <a href="#" class="link">Price</a>
+        </div>
+
+        <div class="images">
+          <div class="picture">
+            <img src="images/graphic3.png" class="image" alt="Graphic" />
+            <div class="image-bar">
+              <p>happiness</p>
+              <div class="statistics-bar">
+                <span class="stat views"><img src="images/views_icon.svg" alt=""><span class="number">102341</span></span>
+                <span class="stat shares"><img src="images/share_icon.svg" alt=""><span class="number">578</span></span>
+                <span class="stat facourites"><img src="images/favourite_icon.svg" alt=""><span class="number">4315</span></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="picture">
+            <img src="images/photographo1.jpg" class="image" alt="dog" />
+            <div class="image-bar">
+              <p>dog in the rain</p>
+              <div class="statistics-bar">
+                <span class="stat views"><img src="images/views_icon.svg" alt=""><span class="number">102341</span></span>
+                <span class="stat shares"><img src="images/share_icon.svg" alt=""><span class="number">578</span></span>
+                <span class="stat facourites"><img src="images/favourite_icon.svg" alt=""><span class="number">4315</span></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="picture">
+            <img src="images/photographo2.jpg" class="image" alt="lines" />
+            <div class="image-bar">
+              <p>lines</p>
+              <div class="statistics-bar">
+                <span class="stat views"><img src="images/views_icon.svg" alt=""><span class="number">102341</span></span>
+                <span class="stat shares"><img src="images/share_icon.svg" alt=""><span class="number">578</span></span>
+                <span class="stat facourites"><img src="images/favourite_icon.svg" alt=""><span class="number">4315</span></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="picture">
+            <img src="images/photographo3.jpg" class="image" alt="cristal" />
+            <div class="image-bar">
+              <p>cristal</p>
+              <div class="statistics-bar">
+                <span class="stat views"><img src="images/views_icon.svg" alt=""><span class="number">102341</span></span>
+                <span class="stat shares"><img src="images/share_icon.svg" alt=""><span class="number">578</span></span>
+                <span class="stat facourites"><img src="images/favourite_icon.svg" alt=""><span class="number">4315</span></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="picture">
+            <img src="images/photographo4.jpg" class="image" alt="bridges" />
+            <div class="image-bar">
+              <p>bridges</p>
+              <div class="statistics-bar">
+                <span class="stat views"><img src="images/views_icon.svg" alt=""><span class="number">102341</span></span>
+                <span class="stat shares"><img src="images/share_icon.svg" alt=""><span class="number">578</span></span>
+                <span class="stat facourites"><img src="images/favourite_icon.svg" alt=""><span class="number">4315</span></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="picture">
+            <img src="images/prof1.png" class="image" alt="mujjo" />
+            <div class="image-bar">
+              <p>mujjo</p>
+              <div class="statistics-bar">
+                <span class="stat views"><img src="images/views_icon.svg" alt=""><span class="number">102341</span></span>
+                <span class="stat shares"><img src="images/share_icon.svg" alt=""><span class="number">578</span></span>
+                <span class="stat facourites"><img src="images/favourite_icon.svg" alt=""><span class="number">4315</span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <script src="script/jquery-3.1.0.min.js"></script>
+      <script src="script/app.js"></script>
+      <script src="script/utils.js"></script>
+      <script src="script/header.controller.js"></script>
+      <script src="script/banner.controller.js"></script>
+      <script src="script/login.controller.js"></script>
+      <script src="script/search.controller.js"></script>
+    <!-- Additional scripts -->
+  </body>
+</html>
