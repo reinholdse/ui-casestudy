@@ -135,6 +135,7 @@ input {
 .input-bundle {
   margin-top: 10px;
   width: 280px;
+  position: relative;
 }
 
 .input-bundle input:focus {

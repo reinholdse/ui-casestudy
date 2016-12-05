@@ -4,18 +4,14 @@
 var App = {
 
   settings: {
-    modules: []
+    modules: {}
   },
 
   init: function() {
-    App.settings.modules['header.controller'].init();
-    App.settings.modules['banner.controller'].init();
-    App.settings.modules['search.controller'].init();
-    App.settings.modules['login.controller'].init();
-
-    // App.settings.modules.forEach(function(module) {
-    //   module.init();
-    // });
+    for (var key in App.settings.modules) {
+      if (!App.settings.modules.hasOwnProperty(key)) continue;
+      App.settings.modules[key].init();
+    }
   },
 
   require: function(moduleName) {

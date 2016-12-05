@@ -7,5 +7,5 @@ var Utils = {
       esc();
     }
   }
-  
+
 };

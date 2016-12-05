@@ -33,8 +33,8 @@ var SearchController = {
     });
     SearchController.settings.body.on('keydown', function(e) {
       if (SearchController.settings.overlay.is(':visible'))
-        Utils.reactToKeypress(SearchController.close(),
-                              SearchController.close(),
+        Utils.reactToKeypress(SearchController.close,
+                              SearchController.close,
                               e);
     });
   },

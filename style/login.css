@@ -60,3 +60,11 @@
   width: 160px;
   margin-top: 12px;
 }
+
+#modal-signup .confirm {
+  width: 20px;
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  z-index: 110;
+}
