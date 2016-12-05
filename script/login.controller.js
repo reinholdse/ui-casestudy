@@ -3,8 +3,6 @@
 
 var HeaderController = App.require('header.controller');
 var BannerController = App.require('banner.controller');
-var confirmPasswordIsOk = false;
-var confirmEmailIsOk = false;
 
 var LoginController = {
 
@@ -146,9 +144,11 @@ var LoginController = {
   signUpUser: function() {
     var name = LoginController.settings.signup.modal.find('[name=username]').val();
     var password = LoginController.settings.signup.modal.find('[name=password]').val();
+    var confirmPassword = LoginController.settings.signup.modal.find('[name=confirmPassword]').val();
     var email = LoginController.settings.signup.modal.find('[name=email]').val();
+    var confirmEmail = LoginController.settings.signup.modal.find('[name=confirmEmail]').val();
 
-    if(name.length > 0 && password.length > 0 && email.length > 0 && confirmPasswordIsOk && confirmEmailIsOk) {
+    if(name.length > 0 && password.length > 0 && email.length > 0 && confirmPassword == password && confirmEmail == email) {
       $.cookie(name, password);
       LoginController.close();
       HeaderController.logIn(name);
@@ -165,13 +165,10 @@ var LoginController = {
 
 		if(confirmPassword != password && confirmPassword.length > 0) {
       $('#iconConfirmPassword').attr('src', 'images/iconNOK.png');
-      confirmPasswordIsOk = false;
 		} else if(confirmPassword == password){
       $('#iconConfirmPassword').attr('src', 'images/iconOK.png');
-      confirmPasswordIsOk = true;
 		} else if(confirmPassword.length == 0) {
       $('#iconConfirmPassword').attr('src', '');
-      confirmPasswordIsOk = false;
     }
   },
 
@@ -180,13 +177,10 @@ var LoginController = {
     var confirmEmail = LoginController.settings.signup.modal.find('[name=confirmEmail]').val();
     if(confirmEmail != email && confirmEmail.length > 0) {
       $('#iconConfirmEmail').attr('src', 'images/iconNOK.png');
-      confirmEmailIsOk = false;
     } else if(confirmEmail == email){
       $('#iconConfirmEmail').attr('src', 'images/iconOK.png');
-      confirmEmailIsOk = true;
     } else if(confirmEmail.length == 0) {
       $('#iconConfirmEmail').attr('src', '');
-      confirmEmailIsOk = false;
     }
   }
 
