@@ -16,8 +16,12 @@
   </head>
   <body>
 
-    <div class="overlay">
-      <a class="btn-exit-overlay" href="#"><img src="images/white_exit_cross.svg" alt=""></a>
+    <div class="overlay search-overlay">
+      <a class="btn-exit-overlay btn-exit-search-overlay" href="#"><img src="images/white_exit_cross.svg" alt=""></a>
+    </div>
+
+    <div class="overlay user-overlay">
+      <a class="btn-exit-overlay btn-exit-user-overlay" href="#"><img src="images/white_exit_cross.svg" alt=""></a>
       <div id="modal-head-bar" class="flex-container">
         <a id="tab-login" class="link" href="#">LOG IN</a>
         <a id="tab-signup" class="link" href="#">SIGN UP</a>
@@ -36,18 +40,26 @@
           <input type="text" name="username" placeholder="username" maxlength="20">
         </div>
         <div class="input-bundle">
-          <input type="password" name="password" placeholder="password" maxlength="28">
-          <input type="password" placeholder="confirm password" maxlength="28">
+          <input type="password" name="password" placeholder="password" maxlength="28" id="signupPassword">
+          <input type="password" name="confirmPassword" placeholder="confirm password" maxlength="28" id="confirmPassword">
+          <img src="" alt="" class="confirm" id="iconConfirmPassword">
+
         </div>
         <div class="input-bundle">
-          <input type="email" placeholder="email">
-          <input type="email" placeholder="confirm email">
+          <input type="email" name="email" placeholder="email" >
+          <input type="email" name="confirmEmail" placeholder="confirm email" id="confirmEmail">
+          <img src="" alt="" class="confirm" id="iconConfirmEmail">
         </div>
         <div class="flex-container">
           <span class="checkbox"></span><span>I feel happy today!</span>
         </div>
         <a href="#" class="btn-default btn-highlight btn-user-signup">Sign Up</a>
       </div>
+    </div>
+
+    <div id="floating-action-search">
+      <button class="btn-search btn-highlight"><img src="images/search_icon.svg" alt=""></button>
+      <input class="input-search" type="text" placeholder="search">
     </div>
 
     <header class="flex-container">
@@ -191,6 +203,7 @@
       <script src="script/banner.controller.js"></script>
       <script src="script/login.controller.js"></script>
       <script src="script/search.controller.js"></script>
+      <script src="script/jquery.cookie.js"></script>
     <!-- Additional scripts -->
   </body>
 </html>
