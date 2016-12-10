@@ -25,11 +25,21 @@ var ProfileController = {
       ProfileController.settings.photoExpanded.css("display", "flex");
     });
     ProfileController.settings.back.on('click', function(e){
-      e.preventDefault();
-      ProfileController.settings.photoExpanded.css("display", "none");
-      ProfileController.settings.gallery.css("display", "initial");
+          e.preventDefault();
+          ProfileController.close();
+    });
+    ProfileController.settings.body.on('keydown', function(e) {
+      if (ProfileController.settings.photoExpanded.is(':visible'))
+        Utils.reactToKeypress(function(){},
+                              ProfileController.close,
+                              e);
     });
 
+  },
+
+  close: function(){
+    ProfileController.settings.photoExpanded.css("display", "none");
+    ProfileController.settings.gallery.css("display", "initial");
   }
 };
 
