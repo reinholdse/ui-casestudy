@@ -48,6 +48,10 @@
   font-size: 20px;
 }
 
+#banner-search .search-bar {
+  position: relative;
+}
+
 #banner-search input {
   margin-top: 30px;
   height: 58px;
@@ -60,7 +64,8 @@
 #banner-search img {
   position: absolute;
   height: 40px;
-  transform: translate(364px, 28px);
+  bottom: 8px;
+  right: 15px;
 }
 
 #banner-search img:hover {
