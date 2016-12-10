@@ -1,3 +1,4 @@
+/* Signup Banner */
 #banner-signup {
   position: relative;
   height: 580px;
@@ -27,4 +28,41 @@
   width: 160px;
   line-height: 40px;
   font-size: 20px;
+}
+
+/* Search Banner */
+#banner-search {
+  position: relative;
+  height: 252px;
+  background-repeat: no-repeat;
+  background-position: center top;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#banner-search p {
+  margin: 0;
+  color: rgba(255, 255, 255, .7);
+  font-size: 20px;
+}
+
+#banner-search input {
+  margin-top: 30px;
+  height: 58px;
+  width: 800px;
+  font-size: 26px;
+  opacity: 0.6;
+  text-indent: 50px;
+}
+
+#banner-search img {
+  position: absolute;
+  height: 40px;
+  transform: translate(364px, 28px);
+}
+
+#banner-search img:hover {
+  cursor: pointer;
 }

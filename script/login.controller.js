@@ -48,7 +48,7 @@ var LoginController = {
     LoginController.settings.logoutButton.on('click', function(e) {
       e.preventDefault();
       HeaderController.logOut();
-      BannerController.show();
+      BannerController.settings.signupBanner.show();
     });
     LoginController.settings.login.userLoginButton.on('click', function(e) {
       e.preventDefault();
@@ -132,7 +132,7 @@ var LoginController = {
       if(cookiePassword == password) {
         LoginController.close();
         HeaderController.logIn(name);
-        BannerController.settings.signupBanner.slideUp();
+        BannerController.settings.signupBanner.container.slideUp();
       } else {
         alert("Wrong password");
       }
