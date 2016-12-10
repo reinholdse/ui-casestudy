@@ -9,9 +9,9 @@
   margin-left: 45px;
   margin-right: 15px;
   padding: 15px;
-  width: 400px;
   display: flex;
   flex-direction: column;
+  width: 310px;
 }
 
 .user img{
@@ -104,14 +104,14 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .picture{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-bottom: 20px;
+  margin: 0 10px 20px 10px;
   padding: 15px 15px 0px 15px;
   background-color: white;
   border: 0px solid white;
@@ -121,6 +121,7 @@
 
 .image{
   width: 300px;
+  cursor: pointer;
 }
 
 .image-bar{
@@ -132,6 +133,7 @@
 }
 
 .image-bar p{
+  font-size: 14px;
   font-style: italic;
 }
 
@@ -158,3 +160,27 @@
   margin-right: 5px;
   margin-left: 8px;
 }
+
+#photo-expanded{
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.content{
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-back{
+  width: 30px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+#profile-main img.graphic{
+  width: 800px;
+  height: inherit;
+}
+
+ #profile-main .info{
+ }

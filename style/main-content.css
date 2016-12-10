@@ -4,7 +4,7 @@
   align-items: center;
 }
 
-#main-content article {
+article {
   margin-top: 30px;
   padding: 15px;
   background-color: white;
@@ -13,20 +13,20 @@
   justify-content: space-between;
 }
 
-#main-content article:last-child {
+article:last-child {
   margin-bottom: 30px;
 }
 
-#main-content article img {
+article img {
   display: block;
 }
 
-#main-content article img.graphic {
+article img.graphic {
   width: 950px;
   height: 470px;
 }
 
-#main-content article .info {
+article .info {
   width: 410px;
   margin-left: 30px;
   display: flex;
@@ -34,76 +34,76 @@
   justify-content: space-between;
 }
 
-#main-content article .info .user {
+article .info .user {
   display: flex;
   align-items: center;
 }
 
-#main-content article .info .user .profile-picture {
+article .info .user .profile-picture {
   width: 60px;
   height: 60px;
 }
 
-#main-content article .info .user .username {
+ article .info .user .username {
   font-style: italic;
   margin-left: 15px;
   color: #404040;
 }
 
-#main-content article .info .tags {
+ article .info .tags {
   color: #3295b8;
   font-size: 16px;
 }
 
-#main-content article .info .comment-section .comment-default {
+ article .info .comment-section .comment-default {
   border-left: 3px solid #3295b8;
   padding: 3px 0;
   margin: 10px 0;
   font-size: 14px;
 }
 
-#main-content article .info .comment-section .comment-input {
+ article .info .comment-section .comment-input {
   border-left: 3px solid #404040;
 }
 
-#main-content article .info .comment-section .comment-default > div {
+ article .info .comment-section .comment-default > div {
   margin-left: 5px;
 }
 
-#main-content article .info .comment-section .comment-input .input-wrapper {
+ article .info .comment-section .comment-input .input-wrapper {
   position: relative;
   margin-left: 5px;
 }
 
-#main-content article .info .comment-section .comment-input .input-wrapper > input {
+ article .info .comment-section .comment-input .input-wrapper > input {
   height: 20px;
 }
 
-#main-content article .info .comment-section .comment-input .input-wrapper > a > img {
+ article .info .comment-section .comment-input .input-wrapper > a > img {
   height: 10px;
 }
 
-#main-content article .info .comment-section .comment-input .input-wrapper > a {
+ article .info .comment-section .comment-input .input-wrapper > a {
   position: absolute;
   top: 4px;
   right: 10px;
 }
 
-#main-content article .info .statistics-bar,
-#main-content article .info .statistics-bar .stat {
+ article .info .statistics-bar,
+ article .info .statistics-bar .stat {
   display: flex;
   align-items: center;
 }
 
-#main-content article .info .stat:not(:first-child) {
+ article .info .stat:not(:first-child) {
   margin-left: 45px;
 }
 
-#main-content article .info .statistics-bar img {
+ article .info .statistics-bar img {
   height: 15px;
 }
 
-#main-content article .info .statistics-bar .number {
+ article .info .statistics-bar .number {
   font-size: 12px;
   color: #999;
   margin-left: 10px;
