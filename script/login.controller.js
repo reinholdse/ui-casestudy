@@ -3,6 +3,7 @@
 
 var HeaderController = App.require('header.controller');
 var BannerController = App.require('banner.controller');
+var SugController = App.require('suggestions.controller');
 
 var LoginController = {
 
@@ -49,6 +50,7 @@ var LoginController = {
       e.preventDefault();
       HeaderController.logOut();
       BannerController.settings.signupBanner.show();
+      SugController.settings.container.slideUp(800);
     });
     LoginController.settings.login.userLoginButton.on('click', function(e) {
       e.preventDefault();
@@ -133,6 +135,7 @@ var LoginController = {
         LoginController.close();
         HeaderController.logIn(name);
         BannerController.settings.signupBanner.container.slideUp();
+        SugController.settings.container.slideDown();
       } else {
         alert("Wrong password");
       }
@@ -152,7 +155,8 @@ var LoginController = {
       $.cookie(name, password);
       LoginController.close();
       HeaderController.logIn(name);
-      BannerController.settings.signupBanner.slideUp();
+      BannerController.settings.signupBanner.container.slideUp();
+      SugController.settings.container.slideDown();
     } else {
       alert("You haven't answer everything");
     }

@@ -12,6 +12,7 @@
     <link href="style/login.css" rel="stylesheet">
     <link href="style/main-content.css" rel="stylesheet">
     <link href="style/search.css"  rel="stylesheet">
+    <link href="style/suggestions.css" rel="stylesheet">
     <!-- Additional stylesheets -->
   </head>
   <body>
@@ -97,6 +98,44 @@
       <div class="search-bar">
         <input type="text" placeholder="Search ...">
         <img src="images/search_icon_black.svg" alt="">
+      </div>
+    </section>
+
+    <section id="suggestions">
+      <h2>People You might be interested in</h2>
+      <div class="flex-container side-scroll-container">
+        <a class="side-scroll-btn scroll-btn-prev" href="#"><img src="images/back.svg" alt="Previous"></a>
+        <div class="flex-container side-scroll-elements">
+          <!-- <div class="side-scroll-elem">
+            <img src="images/prof5.png" alt="">
+            <p class="username">masooma</p>
+          </div>
+          <div class="side-scroll-elem">
+            <img src="images/prof1.png" alt="">
+            <p class="username">mujjo</p>
+          </div>
+          <div class="side-scroll-elem">
+            <img src="images/prof2.png" alt="">
+            <p class="username">elise</p>
+          </div>
+          <div class="side-scroll-elem">
+            <img src="images/prof3.png" alt="">
+            <p class="username">michel</p>
+          </div>
+          <div class="side-scroll-elem">
+            <img src="images/prof4.png" alt="">
+            <p class="username">photographo</p>
+          </div>
+          <div class="side-scroll-elem">
+            <img src="images/prof5.png" alt="">
+            <p class="username">masooma</p>
+          </div>
+          <div class="side-scroll-elem">
+            <img src="images/prof1.png" alt="">
+            <p class="username">mujjo</p>
+          </div> -->
+        </div>
+        <a class="side-scroll-btn scroll-btn-next" href="#"><img src="images/back.svg" alt="Next"></a>
       </div>
     </section>
 
@@ -214,13 +253,14 @@
     <!-- Additional sections -->
 
     <script src="script/jquery-3.1.0.min.js"></script>
+    <script src="script/jquery.cookie.js"></script>
     <script src="script/app.js"></script>
     <script src="script/utils.js"></script>
     <script src="script/header.controller.js"></script>
     <script src="script/banner.controller.js"></script>
+    <script src="script/suggestions.controller.js"></script>
     <script src="script/login.controller.js"></script>
     <script src="script/search.controller.js"></script>
-    <script src="script/jquery.cookie.js"></script>
     <!-- Additional modules -->
   </body>
 </html>

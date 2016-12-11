@@ -1,0 +1,47 @@
+#suggestions {
+  height: 320px;
+  background-color: white;
+  text-align: center;
+  padding: 15px;
+  display: none;
+}
+
+#suggestions p,
+#suggestions h2 {
+  margin: 0;
+}
+
+#suggestions h2 {
+  font-size: 22px;
+  font-weight: 300;
+  margin-top: 15px;
+}
+
+.side-scroll-container {
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.side-scroll-container .side-scroll-btn > img {
+  width: 60px;
+}
+
+.side-scroll-container .side-scroll-btn.scroll-btn-next {
+  transform: rotate(180deg);
+}
+
+.side-scroll-container .side-scroll-elements {
+  justify-content: space-around;
+  overflow: hidden;
+  margin: 0 30px;
+  width: 1470px;
+}
+
+.side-scroll-container .side-scroll-elements .side-scroll-elem {
+  margin: 0 30px;
+  transition: all 0.3s;
+}
+
+.side-scroll-container .side-scroll-elements .side-scroll-elem > img {
+  width: 150px;
+}
