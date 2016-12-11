@@ -31,15 +31,26 @@
 }
 
 .side-scroll-container .side-scroll-elements {
-  justify-content: space-around;
-  overflow: hidden;
   margin: 0 30px;
   width: 1470px;
+  overflow: hidden;
+  justify-content: space-around;
 }
 
 .side-scroll-container .side-scroll-elements .side-scroll-elem {
+  position: relative;
   margin: 0 30px;
-  transition: all 0.3s;
+  right: 0;
+  left: 0;
+  transition: all 0.6s;
+}
+
+.side-scroll-container .side-scroll-elements.next .side-scroll-elem {
+  left: -210px;
+}
+
+.side-scroll-container .side-scroll-elements.prev .side-scroll-elem {
+  left: 210px;
 }
 
 .side-scroll-container .side-scroll-elements .side-scroll-elem > img {

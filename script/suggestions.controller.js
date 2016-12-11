@@ -40,12 +40,10 @@ var SugController = {
 
   fillContent: function() {
     var width = SugController.settings.scrollElemContainer.width();
-    var numToInsert = width / SugController.settings.sideScrollElemWidth;
-    SugController.settings.scrollElemContainer.append(SugController.fillSnippet(SugController.settings.db[numToInsert%5]));
+    var numToInsert = (width / SugController.settings.sideScrollElemWidth) + 2;
     for (var i = 0; i < numToInsert; i++) {
       SugController.settings.scrollElemContainer.append(SugController.fillSnippet(SugController.settings.db[i%5]))
     }
-    SugController.settings.scrollElemContainer.append(SugController.fillSnippet(SugController.settings.db[0]));
   },
 
   fillSnippet: function(profile) {
@@ -54,17 +52,32 @@ var SugController = {
   },
 
   next: function() {
-    SugController.settings.scrollElemContainer.append(SugController.fillSnippet(SugController.settings.db[SugController.settings.scrollBarState%5]));
-    SugController.settings.scrollBarState++;
-    SugController.settings.scrollElemContainer.append(SugController.fillSnippet(SugController.settings.db[SugController.settings.scrollBarState%5]));
-    SugController.settings.scrollBarState++;
+    SugController.settings.scrollElemContainer.addClass('next');
+    setTimeout(function(){
+      SugController.settings.scrollElemContainer.children().css('transition', 'all 0s');
+      var first = SugController.settings.scrollElemContainer.children().first();
+      first.remove();
+      SugController.settings.scrollElemContainer.append(first);
+      SugController.settings.scrollElemContainer.removeClass('next');
+      setTimeout(function() {
+        SugController.settings.scrollElemContainer.children().css('transition', 'all 0.6s');
+      }, 30);
+    }, 600);
   },
 
   prev: function() {
-    SugController.settings.scrollElemContainer.prepend(SugController.fillSnippet(SugController.settings.db[SugController.settings.scrollBarState%5]));
-    SugController.settings.scrollBarState++;
-    SugController.settings.scrollElemContainer.prepend(SugController.fillSnippet(SugController.settings.db[SugController.settings.scrollBarState%5]));
-    SugController.settings.scrollBarState++;
+    SugController.settings.scrollElemContainer.addClass('prev');
+    setTimeout(function(){
+      SugController.settings.scrollElemContainer.children().css('transition', 'all 0s');
+      var last = SugController.settings.scrollElemContainer.children().last();
+      last.remove();
+      SugController.settings.scrollElemContainer.prepend(last);
+      SugController.settings.scrollElemContainer.removeClass('prev');
+      setTimeout(function(){
+        SugController.settings.scrollElemContainer.children().css('transition', 'all 0.6s');
+      }, 30);
+
+    }, 600);
   }
 
 };
