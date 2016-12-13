@@ -1,3 +1,6 @@
+(function(global){
+'use strict';
+
 var Utils = {
 
   reactToKeypress: function(enter, esc, e) {
@@ -7,5 +10,8 @@ var Utils = {
       esc();
     }
   }
-
 };
+
+global.Utils = Utils;
+
+})(window);
